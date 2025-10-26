@@ -1,0 +1,21 @@
+[package]
+name = "yersinia-attack"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Attack orchestration for Yersinia-RS"
+
+[dependencies]
+yersinia-core = { path = "../yersinia-core" }
+tokio = { workspace = true }
+dashmap = { workspace = true }
+tracing = { workspace = true }
+uuid = { workspace = true }
+async-trait = { workspace = true }
+thiserror = { workspace = true }
+parking_lot = { workspace = true }
+
+[dev-dependencies]
+mockall = { workspace = true }

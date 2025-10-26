@@ -1,0 +1,71 @@
+[workspace]
+resolver = "2"
+members = [
+    "yersinia-core",
+    "yersinia-packet",
+    "yersinia-protocols",
+    "yersinia-attack",
+    "yersinia-capture",
+    "yersinia-cli",
+    "yersinia-tui",
+    "yersinia-telnet",
+    "yersinia",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Marc Rivero | @seifreed <mriverolopez@gmail.com>"]
+license = "GPL-2.0-or-later"
+repository = "https://github.com/seifreed/yersinia-rs"
+homepage = "https://github.com/seifreed/yersinia-rs"
+keywords = ["security", "pentesting", "network", "protocols", "cisco"]
+categories = ["network-programming", "command-line-utilities"]
+
+[workspace.dependencies]
+# Core dependencies
+tokio = { version = "1.35", features = ["full"] }
+async-trait = "0.1"
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Networking
+pnet = "0.34"
+pnet_datalink = "0.34"
+pnet_packet = "0.34"
+pcap = "1.1"
+
+# CLI/TUI
+clap = { version = "4.4", features = ["derive", "cargo"] }
+ratatui = "0.25"
+crossterm = "0.27"
+
+# Async/concurrency
+parking_lot = "0.12"
+dashmap = "5.5"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Utilities
+chrono = "0.4"
+rand = "0.8"
+bytes = "1.5"
+hex = "0.4"
+mac_address = "1.1"
+uuid = { version = "1.10", features = ["v7"] }
+
+# Testing
+mockall = "0.12"
+proptest = "1.4"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true

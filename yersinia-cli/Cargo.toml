@@ -1,0 +1,11 @@
+[package]
+name = "yersinia-cli"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "CLI interface for Yersinia-RS"
+
+[dependencies]
+clap = { workspace = true }

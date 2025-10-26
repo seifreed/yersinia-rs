@@ -1,0 +1,16 @@
+[package]
+name = "yersinia-tui"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "TUI interface for Yersinia-RS"
+
+[dependencies]
+yersinia-core = { path = "../yersinia-core" }
+ratatui = { workspace = true }
+crossterm = { workspace = true }
+tokio = { workspace = true }
+uuid = { workspace = true }
+pcap = { workspace = true }

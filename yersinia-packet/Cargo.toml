@@ -1,0 +1,15 @@
+[package]
+name = "yersinia-packet"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Packet construction and parsing for Yersinia-RS"
+
+[dependencies]
+yersinia-core = { path = "../yersinia-core" }
+bytes = { workspace = true }
+thiserror = { workspace = true }
+pnet = { workspace = true }
+pnet_packet = { workspace = true }

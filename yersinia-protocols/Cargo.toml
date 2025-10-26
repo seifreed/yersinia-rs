@@ -1,0 +1,21 @@
+[package]
+name = "yersinia-protocols"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Protocol implementations for Yersinia-RS"
+
+[dependencies]
+yersinia-core = { path = "../yersinia-core" }
+yersinia-packet = { path = "../yersinia-packet" }
+async-trait = { workspace = true }
+tokio = { workspace = true }
+bytes = { workspace = true }
+tracing = { workspace = true }
+rand = { workspace = true }
+uuid = { workspace = true }
+md-5 = "0.10"
+crc32fast = "1.4"
+hex = "0.4"

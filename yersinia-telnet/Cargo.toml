@@ -1,0 +1,21 @@
+[package]
+name = "yersinia-telnet"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Telnet remote administration for Yersinia-RS"
+
+[dependencies]
+yersinia-core = { path = "../yersinia-core" }
+tokio = { workspace = true }
+tracing = { workspace = true }
+uuid = { workspace = true }
+parking_lot = { workspace = true }
+chrono = { workspace = true }
+dashmap = { workspace = true }
+async-trait = { workspace = true }
+
+[dev-dependencies]
+tracing-subscriber = { workspace = true }
