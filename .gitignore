@@ -1,48 +1,55 @@
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
-*.Po
+# Rust build artifacts
+/target/
+**/*.rs.bk
+*.pdb
+Cargo.lock
 
-# Libraries
-*.lib
-*.a
+# IDE and editors
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+# Testing and profiling
+*.profraw
+*.profdata
+/coverage/
+tarpaulin-report.html
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+# Logs
+*.log
 
-# autoconf/automake
-configure
-Makefile
-Makefile.in
-autom4te.cache/*
-src/.deps
-compile
-aclocal.m4
-config.*
-depcomp
-install-sh
-missing
-stamp-h1
+# Documentation build
+/doc/
+/target/doc/
 
-# yersinia binaries
-yersinia
-yersinia.log
-src/yersinia
-src/yersinia.log
+# Environment and secrets
+.env
+.env.local
+*.key
+*.pem
+credentials*
 
-# Coverity builds
-cov-int/*
-yersinia*.tgz
+# OS-specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Packet captures (potentially sensitive)
+*.pcap
+*.pcapng
+
+# Binary outputs
+/yersinia
+/target/release/yersinia
+/target/debug/yersinia
